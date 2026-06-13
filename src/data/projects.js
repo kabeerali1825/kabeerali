@@ -5,6 +5,7 @@ import MobileImage1 from '../images/Microsoft Stores.png';
 import MobileImage2 from '../images/ISV.png';
 import UIImage1 from '../images/POS.jpg';
 import UIImage2 from '../images/Alcon/Alcon1.png';
+import ContinentalImage from '../images/Continental.svg';
 
 export const projectsData = [
 	{
@@ -47,5 +48,12 @@ export const projectsData = [
 		title: 'Point of Sales System- .NET/AZURE Backend',
 		category: '.NET Azure Backend Solution',
 		img: UIImage1,
+	},
+	{
+		id: 7,
+		title: 'Continental Luxe Hosting',
+		category: 'Next.js / React Luxury Web Platform',
+		img: ContinentalImage,
+		url: 'https://continentalluxehosting.com/',
 	},
 ];
