@@ -1,0 +1,15 @@
+{
+	"version": "0.0.1",
+	"autoPort": true,
+	"configurations": [
+		{
+			"name": "portfolio",
+			"runtimeExecutable": "cmd",
+			"runtimeArgs": [
+				"/c",
+				"set NODE_OPTIONS=--openssl-legacy-provider&& npx react-scripts start"
+			],
+			"port": 3007
+		}
+	]
+}
