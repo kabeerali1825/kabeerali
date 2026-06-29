@@ -2,7 +2,7 @@ export interface SocialLink {
 	label: string;
 	href: string;
 	/** icon key resolved in the Icon component */
-	icon: 'github' | 'linkedin' | 'instagram' | 'whatsapp' | 'mail' | 'upwork';
+	icon: 'github' | 'linkedin' | 'instagram' | 'whatsapp' | 'mail' | 'upwork' | 'medium' | 'twitter';
 }
 
 export interface Profile {
@@ -18,6 +18,8 @@ export interface Profile {
 	website: string;
 	githubUsername: string;
 	resumePath: string;
+	/** Topmate booking profile, shown as a CTA in About */
+	topmate?: string;
 	social: SocialLink[];
 }
 

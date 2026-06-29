@@ -5,55 +5,45 @@ import type { Experience } from '$lib/types';
  */
 export const experience: Experience[] = [
 	{
-		role: 'Sr. Software Engineer',
+		role: 'Software Engineer',
 		company: 'Strategic Systems International',
-		location: 'Lahore, Pakistan',
+		location: 'Hybrid',
 		start: '03/2026',
 		end: 'Present',
 		highlights: [
-			'Built an automated weekly PDF reporting module using .NET Web APIs and React to deliver customized client insights.',
-			'Optimized system performance and scalability by offloading intensive report-rendering tasks to serverless Lambda functions.',
-			'Implemented efficient background jobs to aggregate complex datasets without degrading core application responsiveness.'
+			'Re-architected legacy systems and modernized Azure architecture with new services for better scalability and maintainability.',
+			'Cut API query load by 60–80% by eliminating EF Core inefficiencies across critical endpoints.',
+			'Built and deployed 10+ scalable ASP.NET Core Web APIs on Azure App Service with CI/CD pipelines.',
+			'Added async processing (background jobs + real-time updates) for large report exports, eliminating timeouts.'
 		],
-		tech: ['.NET Web API', 'React', 'AWS Lambda']
+		tech: ['.NET Core', 'Azure', 'Azure Functions', 'Service Bus', 'CI/CD']
 	},
 	{
 		role: 'Software Engineer',
-		company: 'CodeNinja',
-		location: 'Lahore, Pakistan',
-		start: '09/2024',
-		end: '02/2026',
+		company: 'Microsoft',
+		location: 'Contract through LTS · Remote',
+		start: '07/2024',
+		end: '03/2026',
 		highlights: [
-			'Developed and optimized backend services using .NET Web API and Azure, ensuring high performance and scalability.',
-			'Designed and maintained the front end with React and TypeScript, enhancing the user experience with responsive, intuitive interfaces.',
-			'Improved system reliability and functionality by debugging and resolving issues across the full stack.'
+			'Collaborated with multiple Microsoft FTE teams on Contact Enrichment Services, Cascade Routing, and ISV solutions.',
+			'Delivered 30+ Service 360 deliverables across multiple sprints and reviewed 150+ pull requests.',
+			'Shipped 200+ production deployments via Azure DevOps CI/CD, reducing downtime.',
+			'Raised unit test coverage from 76% to 90% and built conversational AI chatbots with Azure OpenAI.'
 		],
-		tech: ['.NET Web API', 'Azure', 'React', 'TypeScript']
+		tech: ['.NET Core', 'Azure OpenAI', 'AKS', 'Azure DevOps', 'Cosmos DB']
 	},
 	{
-		role: 'Associate Software Engineer',
-		company: 'Autymate LLC',
-		location: 'Lahore, Pakistan',
-		start: '09/2023',
-		end: '09/2024',
+		role: 'Software Engineer',
+		company: 'Lumovy Technology Solutions',
+		location: 'Hybrid',
+		start: '07/2024',
+		end: '03/2026',
 		highlights: [
-			'Developed robust backend systems using .NET, ensuring reliability and scalability for accounting workflows.',
-			'Implemented Azure cloud solutions, optimizing data storage, processing, and application performance.',
-			'Built dynamic and user-friendly front-end interfaces with Angular, enhancing user engagement and usability.'
+			'Worked as a Full-Stack Engineer with .NET / .NET Core, React, and Next.js.',
+			'Built cloud integrations using Microsoft Azure and Azure DevOps.',
+			'Delivered solutions for clients including Janie and Jack and Sysco.',
+			'Worked on Microsoft Dynamics 365 CRM and Power Platform (Power Apps, Power Automate, Power BI).'
 		],
-		tech: ['.NET', 'Azure', 'Angular']
-	},
-	{
-		role: '.NET Developer (Freelancer)',
-		company: 'Upwork',
-		location: 'California, United States',
-		start: '05/2021',
-		end: '08/2023',
-		highlights: [
-			'Delivered multiple projects across diverse domains, showcasing expertise in .NET development and front-end technologies.',
-			'Collaborated with clients to gather requirements, propose solutions, and ensure successful project execution.',
-			'Ensured timely delivery by managing project timelines and meeting critical deadlines.'
-		],
-		tech: ['.NET', 'C#', 'JavaScript']
+		tech: ['React', 'Next.js', '.NET', 'Dynamics 365', 'Power Platform']
 	}
 ];

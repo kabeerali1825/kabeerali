@@ -8,30 +8,16 @@
 	let name = $state('');
 	let email = $state('');
 	let message = $state('');
-	let company = $state(''); // honeypot
-	let status = $state<'idle' | 'sending' | 'success' | 'error'>('idle');
-	let errorMsg = $state('');
+	let opened = $state(false);
 
-	async function submit(e: SubmitEvent) {
+	function submit(e: SubmitEvent) {
 		e.preventDefault();
-		if (status === 'sending') return;
-		status = 'sending';
-		errorMsg = '';
-
-		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				headers: { 'content-type': 'application/json' },
-				body: JSON.stringify({ name, email, message, company })
-			});
-			const data = await res.json().catch(() => ({}));
-			if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
-			status = 'success';
-			name = email = message = '';
-		} catch (err) {
-			status = 'error';
-			errorMsg = err instanceof Error ? err.message : 'Something went wrong.';
-		}
+		const subject = encodeURIComponent(`Portfolio enquiry from ${name || 'a visitor'}`);
+		const body = encodeURIComponent(
+			`Name: ${name}\nEmail: ${email}\n\n${message}`
+		);
+		window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+		opened = true;
 	}
 
 	const inputClass =
@@ -66,22 +52,28 @@
 					</div>
 				</a>
 			{/each}
+
+			{#if profile.topmate}
+				<a
+					href={profile.topmate}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="glass flex items-center gap-4 rounded-xl p-4 transition hover:-translate-y-1 hover:text-brand-400"
+				>
+					<span class="grid h-11 w-11 flex-shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-400">
+						<Icon name="external" size={20} />
+					</span>
+					<div>
+						<p class="text-sm font-semibold" style="color: var(--text)">Topmate</p>
+						<p class="text-xs" style="color: var(--text-muted)">Book a 1:1 session</p>
+					</div>
+				</a>
+			{/if}
 		</div>
 
 		<!-- form -->
 		<GlassCard class="p-6 sm:p-8" >
 			<form onsubmit={submit} class="space-y-4" use:reveal={{ x: 30, y: 0 }}>
-				<!-- honeypot (hidden from users) -->
-				<input
-					type="text"
-					bind:value={company}
-					name="company"
-					tabindex="-1"
-					autocomplete="off"
-					class="absolute -left-[9999px] h-0 w-0"
-					aria-hidden="true"
-				/>
-
 				<div class="grid gap-4 sm:grid-cols-2">
 					<div>
 						<label for="name" class="mb-1.5 block text-sm font-medium">Name</label>
@@ -122,22 +114,16 @@
 
 				<button
 					type="submit"
-					disabled={status === 'sending'}
-					class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 px-6 py-3 font-medium text-white shadow-lg shadow-brand-500/30 transition-all hover:shadow-brand-500/50 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+					class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 px-6 py-3 font-medium text-white shadow-lg shadow-brand-500/30 transition-all hover:shadow-brand-500/50 sm:w-auto"
 				>
-					{#if status === 'sending'}
-						Sending…
-					{:else}
-						Send Message <Icon name="arrow" size={18} />
-					{/if}
+					Send Message <Icon name="arrow" size={18} />
 				</button>
 
-				{#if status === 'success'}
+				{#if opened}
 					<p class="text-sm font-medium text-emerald-400">
-						✓ Thanks! Your message has been sent. I'll get back to you soon.
+						✓ Opening your email app… if nothing happens, email me at
+						<a href={`mailto:${profile.email}`} class="underline">{profile.email}</a>.
 					</p>
-				{:else if status === 'error'}
-					<p class="text-sm font-medium text-pink-400">{errorMsg}</p>
 				{/if}
 			</form>
 		</GlassCard>

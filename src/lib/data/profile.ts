@@ -1,31 +1,37 @@
 import type { Profile } from '$lib/types';
 
 export const profile: Profile = {
-	name: 'Muhammad Ashar',
-	title: 'Sr. Software Engineer',
+	name: 'Kabeer Ali',
+	title: 'Software Engineer',
 	roles: [
-		'Sr. Software Engineer',
-		'.NET & Cloud Specialist',
+		'Software Engineer',
+		'.NET & Azure Specialist',
 		'Full-Stack Developer',
-		'AI Application Builder'
+		'Power Platform & AI Builder'
 	],
-	tagline: '</> Declare Variables, Not War </>',
-	bio: `Sr. Software Engineer with 4+ years of experience, specializing in .NET, Artificial
-Intelligence (AI), and cloud technologies, with a strong background in building scalable
-enterprise applications and reusable component libraries. Skilled in full-stack development,
-system design, DevOps, and performance optimization across AWS and Azure environments.`,
+	tagline: '</> Engineering enterprise-grade solutions </>',
+	bio: `Software Engineer at Strategic Systems International, previously contracted with Microsoft.
+I build enterprise-grade full-stack web applications (.NET, React, TypeScript, Next.js), .NET cloud
+solutions, AI-powered products, and Microsoft Business Apps projects. Strong knowledge of Azure
+services — Azure integrations (.NET), Azure DevOps (Classic, OneBranch) pipelines, Docker, AKS,
+Azure OpenAI, and Power Platform (Power Apps, Power BI, Power Automate, Microsoft Copilots).
+
+I hold a BS in Information Technology from PUCIT/FCIT Old Campus, Lahore, with strong technical and
+problem-solving skills and 2+ years of hands-on .NET full-stack, Power Platform, and Azure
+integration experience, plus working knowledge of MERN, Python (Flask, Django), and Machine Learning.`,
 	location: 'Lahore, Pakistan',
-	email: 'muhammadashar401@gmail.com',
-	phone: '+92-309-4394150',
-	website: 'https://im-ashar.github.io',
-	githubUsername: 'im-ashar',
+	email: 'kabeeransari2003@gmail.com',
+	phone: '+923045094347',
+	website: 'https://github.com/kabeerali1825',
+	githubUsername: 'kabeerali1825',
 	resumePath: '/resume.pdf',
+	topmate: 'https://topmate.io/kabeer_ali/',
 	social: [
-		{ label: 'GitHub', href: 'https://github.com/im-ashar', icon: 'github' },
-		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/ashardev/', icon: 'linkedin' },
-		{ label: 'Upwork', href: 'https://www.upwork.com/freelancers/~01d3e02810a3244d32', icon: 'upwork' },
-		{ label: 'Instagram', href: 'https://www.instagram.com/ashar.dev', icon: 'instagram' },
-		{ label: 'WhatsApp', href: 'https://wa.me/923094394150', icon: 'whatsapp' },
-		{ label: 'Email', href: 'mailto:muhammadashar401@gmail.com', icon: 'mail' }
+		{ label: 'GitHub', href: 'https://github.com/kabeerali1825', icon: 'github' },
+		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/kabeer-ali18/', icon: 'linkedin' },
+		{ label: 'Medium', href: 'https://medium.com/@kabeeransari2003', icon: 'medium' },
+		{ label: 'Twitter', href: 'https://x.com/AliKabeer_', icon: 'twitter' },
+		{ label: 'Instagram', href: 'https://www.instagram.com/whykabeer/', icon: 'instagram' },
+		{ label: 'Email', href: 'mailto:kabeeransari2003@gmail.com', icon: 'mail' }
 	]
 };

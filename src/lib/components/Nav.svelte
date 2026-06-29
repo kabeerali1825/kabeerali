@@ -72,7 +72,7 @@
 >
 	<nav class="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
 		<button onclick={() => go('home')} class="font-display text-lg font-bold">
-			<span class="gradient-text">M</span><span style="color: var(--text)">Ashar</span>
+			<span class="gradient-text">K</span><span style="color: var(--text)">abeer</span>
 		</button>
 
 		<!-- Desktop links -->

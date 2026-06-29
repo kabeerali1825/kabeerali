@@ -4,6 +4,7 @@
 	import SectionHeading from './ui/SectionHeading.svelte';
 	import GlassCard from './ui/GlassCard.svelte';
 	import ResumeButton from './ResumeButton.svelte';
+	import Icon from './ui/Icon.svelte';
 
 	const facts = [
 		{ label: 'Location', value: profile.location },
@@ -50,8 +51,19 @@
 				{/each}
 			</div>
 
-			<div class="mt-8">
+			<div class="mt-8 flex flex-wrap items-center gap-4">
 				<ResumeButton />
+				{#if profile.topmate}
+					<a
+						href={profile.topmate}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-2 rounded-full border border-brand-500/40 px-6 py-3 font-medium text-brand-400 transition-all duration-300 hover:scale-105 hover:bg-brand-500/10 active:scale-95"
+					>
+						Book on Topmate
+						<Icon name="external" size={18} />
+					</a>
+				{/if}
 			</div>
 		</div>
 	</div>

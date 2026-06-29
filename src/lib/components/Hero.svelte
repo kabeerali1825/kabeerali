@@ -69,7 +69,7 @@
 				bind:this={headline}
 				class="font-display text-4xl font-bold leading-tight min-[400px]:text-5xl sm:text-6xl lg:text-7xl"
 			>
-				<span data-line class="block">Hi, I'm <GradientText>Muhammad Ashar</GradientText></span>
+				<span data-line class="block">Hi, I'm <GradientText>Kabeer Ali</GradientText></span>
 				<span
 					data-line
 					class="mt-2 block text-xl font-medium min-[400px]:text-2xl sm:text-3xl"
@@ -81,9 +81,13 @@
 				</span>
 			</h1>
 
-			<p class="mt-6 max-w-xl text-base leading-relaxed sm:text-lg" style="color: var(--text-muted)">
-				I build fast, colorful, and reliable web applications — from pixel-perfect front-ends to
-				scalable cloud back-ends.
+			<p class="mt-6 max-w-xl text-base font-medium sm:text-lg" style="color: var(--text)">
+				A Full-Stack .NET Azure Developer and Microsoft Business Apps Specialist. Specializing in AI.
+			</p>
+
+			<p class="mt-3 max-w-xl text-base leading-relaxed sm:text-lg" style="color: var(--text-muted)">
+				Leveraging .NET and Azure, I provide simple and scalable solutions to complex business
+				problems.
 			</p>
 
 			<div bind:this={cta} class="mt-8 flex flex-col gap-3 min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:items-center min-[400px]:gap-4">

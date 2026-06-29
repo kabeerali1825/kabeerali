@@ -40,7 +40,7 @@
 <section bind:this={section} id="skills" class="relative mx-auto max-w-6xl scroll-mt-24 px-4 py-24 sm:px-6">
 	<SectionHeading eyebrow="What I work with" title="Skills & Tech" />
 
-	<div class="grid gap-6 sm:grid-cols-2">
+	<div class="grid items-start gap-6 sm:grid-cols-2">
 		{#each skills as category (category.name)}
 			<GlassCard class="p-6" hover>
 				<h3 class="font-display mb-5 text-lg font-bold text-brand-400">{category.name}</h3>

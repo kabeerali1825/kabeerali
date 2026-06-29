@@ -6,7 +6,6 @@
 	import Experience from '$lib/components/Experience.svelte';
 	import Education from '$lib/components/Education.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import Upwork from '$lib/components/Upwork.svelte';
 	import GithubStats from '$lib/components/GithubStats.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 
@@ -30,5 +29,4 @@
 <Skills />
 <Projects />
 <GithubStats />
-<Upwork />
 <Contact />

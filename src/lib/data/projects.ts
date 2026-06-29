@@ -11,87 +11,129 @@ import type { Project } from '$lib/types';
  * Tip: add `links.repo` / `links.live` once URLs are available.
  */
 export const projects: Project[] = [
-    {
-        slug: 'reactiveblazor',
-        title: 'ReactiveBlazor',
-        tagline: 'Open-source reactive state library for Blazor',
-        description: `Authored and actively maintained, ReactiveBlazor is an open-source .NET library on
-GitHub that integrates reactive programming patterns into Blazor SSR applications to optimize
-state management and component performance.`,
-        tags: ['.NET', 'Blazor', 'Open Source'],
-        cover: '/projects/reactiveblazor/cover.jpg',
-        images: ['/projects/reactiveblazor/cover.jpg'],
-        links: { demo: 'https://reactive-blazor.runasp.net/', repo: 'https://github.com/im-ashar/ReactiveBlazor' },
-        featured: true,
-        year: 2025
-    },
-    {
-        slug: 'moviesmafia',
-        title: 'MoviesMafia',
-        tagline: 'Movie & series discovery and streaming portal on Blazor SSR',
-        description: `A full-featured movie and series discovery, browsing, and streaming portal built on
-Blazor Static SSR (.NET 10) with no SignalR circuit or WebAssembly. Features TMDB-powered
-discovery rows, live search with scope/sort/year/min-rating filters, cinematic detail pages
-(cast, crew, production, recommendations), a YouTube trailer player with full-video sidebar,
-and an embed-based watch page with persistent season/episode navigation. Interactivity is
-delivered via ReactiveBlazor and Alpine.js, styled with Tailwind v4, and backed by ASP.NET
-Identity on PostgreSQL.`,
-        tags: ['.NET', 'Blazor', 'Web App'],
-        cover: '/projects/moviesmafia/cover.jpg',
-        images: ['/projects/moviesmafia/cover.jpg', '/projects/moviesmafia/1.png', '/projects/moviesmafia/2.png', '/projects/moviesmafia/3.png', '/projects/moviesmafia/4.png'],
-        links: { repo: 'https://github.com/im-ashar/MoviesMafia',live:'https://moviesmafia.runasp.net/' },
-        featured: true,
-        year: 2026
-    },
-    {
-        slug: 'aichatpdf',
-        title: 'AI - ChatPDF',
-        tagline: 'Chat with your PDFs, powered by OpenAI',
-        description: `Built with .NET 7 MVC, AI-ChatPDF lets users extract text from PDF documents and
-engage in a question-and-answer session based on the extracted content. It leverages the OpenAI
-API's completion capabilities to provide intelligent, context-aware responses.`,
-        tags: ['.NET', 'AI', 'OpenAI'],
-        cover: '/projects/aichatpdf/cover.png',
-        images: ['/projects/aichatpdf/cover.png'],
-        links: {},
-        featured: false,
-        year: 2024
-    },
-    {
-        slug: 'blazingblog',
-        title: 'BlazingBlog',
-        tagline: 'Dynamic blog platform built on Blazor .NET 8',
-        description: `A dynamic and responsive blog application built with Blazor .NET 8. It features an
-intuitive, feature-rich admin side for content management and administrative functionality —
-showcasing a commitment to staying current with the latest advancements in the Microsoft
-ecosystem.`,
-        tags: ['.NET', 'Blazor', 'Web App'],
-        cover: '/projects/blazingblog/cover.jpg',
-        images: ['/projects/blazingblog/cover.jpg', '/projects/blazingblog/1.png', '/projects/blazingblog/2.png', '/projects/blazingblog/3.png'],
-        links: { live: 'https://blazing-blog.runasp.net/', repo: 'https://github.com/im-ashar/BlazingBlog' },
-        featured: true,
-        year: 2024
-    },
-    {
-        slug: 'edsys',
-        title: 'EdSys',
-        tagline: 'School management & administration platform',
-        description: `A comprehensive school management platform designed to centralize and automate
-core administrative workflows — including student and teacher administration, fee processing,
-attendance tracking, and examination scheduling. Built with Angular and .NET.`,
-        tags: ['.NET', 'Angular', 'Web App'],
-        cover: '/projects/edsys/cover.png',
-        images: ['/projects/edsys/cover.png', '/projects/edsys/1.jpeg', '/projects/edsys/2.jpeg', '/projects/edsys/3.jpeg', '/projects/edsys/4.jpeg'],
-        links: { repo: 'https://github.com/im-ashar/EdSys' },
-        featured: true,
-        year: 2023
-    }
+	{
+		slug: 'ces',
+		title: 'Microsoft Contact Enrichment Services',
+		tagline: '.NET / Azure / React modernization of Microsoft CES',
+		description: `Modernized Microsoft's Contact Enrichment Services (CES) by upgrading legacy Azure
+WebJobs (GDPR, CDQS) from .NET Framework 4.7.2 to modern .NET Core, integrating Azure Service Bus,
+Cosmos DB, and Azure SQL for efficient data handling. Introduced OpenTelemetry for distributed
+tracing and service auditing, hardened authentication with Azure Managed Identity, and integrated
+Microsoft IcM and Security Tracking (S360) for diagnostics and compliance across services.`,
+		tags: ['.NET', 'Azure', 'React'],
+		cover: '/projects/ces/cover.png',
+		images: ['/projects/ces/cover.png', '/projects/ces/1.png', '/projects/ces/2.png'],
+		links: { live: 'https://www.microsoft.com/en-pk/' },
+		featured: true,
+		year: 2025
+	},
+	{
+		slug: 'cascade-routing',
+		title: 'Microsoft Cascade Routing',
+		tagline: 'Locale detection platform on .NET, React & Power Platform',
+		description: `Built a scalable, automated locale detection and routing platform for Microsoft
+combining low-code Power Platform tools with full-stack .NET + React.js. Phase one delivered Canvas
+Apps and Power Automate flows synchronizing data across Dynamics 365 CRM, extended securely via Azure
+Logic Apps and Functions. Phase two delivered responsive React.js + TypeScript UI backed by .NET Core
+Web APIs, deployed through Azure DevOps pipelines — improving localization accuracy and scalability.`,
+		tags: ['.NET', 'Azure', 'Power Platform', 'React'],
+		cover: '/projects/cascade-routing/cover.png',
+		images: [
+			'/projects/cascade-routing/cover.png',
+			'/projects/cascade-routing/1.png',
+			'/projects/cascade-routing/2.png'
+		],
+		links: { live: 'https://www.microsoft.com/en-pk/' },
+		featured: true,
+		year: 2024
+	},
+	{
+		slug: 'microsoft-stores',
+		title: 'Microsoft Stores Platform',
+		tagline: 'Globalized commerce platform on .NET, Azure & React',
+		description: `Contributed as a Full-Stack Developer to the Microsoft Stores ecosystem — a highly
+responsive, scalable web platform letting users worldwide purchase games, PCs, and software based on
+their region, language, and currency. Built React.js + TypeScript UI and .NET Core APIs, integrated
+Azure SQL for product/order storage, Azure Blob for media, and Azure DevOps CI/CD, with secure
+authentication and payment flows for Microsoft's global commerce needs.`,
+		tags: ['.NET', 'Azure', 'React'],
+		cover: '/projects/microsoft-stores/cover.png',
+		images: [
+			'/projects/microsoft-stores/cover.png',
+			'/projects/microsoft-stores/1.png',
+			'/projects/microsoft-stores/2.png'
+		],
+		links: { live: 'https://www.microsoft.com/en-pk/' },
+		featured: true,
+		year: 2024
+	},
+	{
+		slug: 'isv',
+		title: 'Microsoft ISV',
+		tagline: 'AppSource validation & Sandbox Licensing for Microsoft ISVs',
+		description: `Delivered a secure solution for validating and managing AppSource packages and
+investigating the Sandbox Licensing Portal to improve partner engagement and deployment for Microsoft
+ISVs. Validated and deployed packages using Microsoft Package Deployer and PAC CLI, guided global
+partners through validation workflows, and documented sandbox functionality and security behavior to
+streamline licensing operations — all to Microsoft ISV quality and compliance standards.`,
+		tags: ['.NET', 'Azure', 'Power Platform'],
+		cover: '/projects/isv/cover.jpeg',
+		images: ['/projects/isv/cover.jpeg', '/projects/isv/1.png', '/projects/isv/2.jpeg'],
+		links: { live: 'https://partner.microsoft.com/en-US/' },
+		featured: false,
+		year: 2024
+	},
+	{
+		slug: 'alcon',
+		title: 'Alcon – Resource Allocation App',
+		tagline: 'Resource management on Power Platform & Dynamics 365 CRM',
+		description: `Led implementation of a scalable resource allocation management system on Microsoft
+Dynamics 365 CRM and Power Platform. Built automated Power Automate workflows for approval and
+assignment, designed a flexible Dataverse data model for real-time resource tracking, and developed
+.NET plugins for custom validations and business logic. Delivered detailed Power BI dashboards giving
+management clear insight into resource utilization and availability.`,
+		tags: ['.NET', 'Power Platform', 'Dynamics 365'],
+		cover: '/projects/alcon/cover.png',
+		images: ['/projects/alcon/cover.png', '/projects/alcon/1.png'],
+		links: {},
+		featured: false,
+		year: 2024
+	},
+	{
+		slug: 'pos',
+		title: 'Point of Sales System',
+		tagline: 'Cloud-native POS backend on .NET & Azure',
+		description: `Implemented a fully cloud-native, secure Point of Sales (POS) backend with scalable
+REST APIs in .NET Core. Integrated Azure Active Directory with bearer-token authentication for
+fine-grained, role-based access, secured secrets and connection strings in Azure Key Vault, and used
+Cosmos DB for high-performance real-time access to product and transaction data across a multi-branch
+system. Contributed a React.js frontend and maintained secure-coding and performance best practices.`,
+		tags: ['.NET', 'Azure'],
+		cover: '/projects/pos/cover.png',
+		images: ['/projects/pos/cover.png'],
+		links: {},
+		featured: false,
+		year: 2024
+	},
+	{
+		slug: 'continental',
+		title: 'Continental Luxe Hosting',
+		tagline: 'Luxury web platform on Next.js & React',
+		description: `A luxury hosting web platform built with Next.js and React, delivering a polished,
+high-performance marketing and booking experience with a refined, responsive UI.`,
+		tags: ['Next.js', 'React'],
+		cover: '/projects/continental/cover.svg',
+		images: ['/projects/continental/cover.svg'],
+		links: { live: 'https://continentalluxehosting.com/' },
+		featured: false,
+		year: 2024
+	}
 ];
 
 /** Projects shown on the home page. Falls back to the first 3 if none are flagged. */
 export const featuredProjects: Project[] = projects.some((p) => p.featured)
-    ? projects.filter((p) => p.featured)
-    : projects.slice(0, 3);
+	? projects.filter((p) => p.featured)
+	: projects.slice(0, 3);
 
 /** All unique tags across projects, for the filter UI. */
 export const projectTags: string[] = Array.from(new Set(projects.flatMap((p) => p.tags))).sort();
